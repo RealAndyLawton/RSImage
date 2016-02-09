@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 19
+    }
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 23
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
+        versionCode 1
+        versionName '1.0'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:23.1.1'
+}
